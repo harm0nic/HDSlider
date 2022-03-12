@@ -1,0 +1,81 @@
+/*
+Project Name: HDSlider
+Project URI: https://harmonicdesign.ca
+Author: Harmonic Design
+Author URI: https://harmonicdesign.ca
+Description: Pure Vanilla JS Slider
+*/
+
+.hds_slider {
+	height: 100vh;
+	position: relative;
+	background-color: black;
+	--slide-transition-speed: 600ms;
+}
+
+.hds_slide {
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	transition: all ease-in-out var(--slide-transition-speed);
+	top: -100%;
+}
+
+.hds_slide_active {
+	z-index: 1;
+	opacity: 1;
+	transition: all ease-in-out var(--slide-transition-speed);
+	top: 0;
+}
+
+.hds_nav_item {
+	position: absolute;
+	top: calc((50% - 1.5rem));
+	color: #fff;
+	height: 3rem;
+	width: 3rem;
+	display: flex;
+	border: 1px solid #fff;
+	justify-content: center;
+	align-items: center;
+	font-size: 32px;
+	cursor: pointer;
+	z-index: 2;
+	border-radius: 50%;
+}
+
+.hds_prev {
+	left: 2rem;
+}
+
+.hds_next {
+	right: 2rem;
+}
+
+.hds_pagination {
+	position: absolute;
+	bottom: 1.5rem;
+	z-index: 2;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.hds_pagination_item {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: #4a4a4a;
+	margin: 0 0.2em;
+	cursor: pointer;
+}
+
+.hds_pagination_item_active {
+	background-color: #fff;
+	cursor: default;
+}
