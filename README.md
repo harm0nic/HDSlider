@@ -1,0 +1,2 @@
+# HDSlider
+Vanilla JS Slider
